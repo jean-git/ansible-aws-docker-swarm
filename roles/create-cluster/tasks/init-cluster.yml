@@ -1,7 +1,8 @@
-- name: Initialize Kubernetes master with kubeadm init.
+- name: Initialize Swarm.
   command:
     docker swarm init | grep -i  'docker swarm' | grep -v manager
   register: swarm_join_command
+- name: "Add Swarm worker join command to dummy host"  
   add_host:
     name:   "SWARM_JOIN_COMMAND_HOLDER"
     swarm_join_command:  "{{ swarm_join_command.stdout }}"
