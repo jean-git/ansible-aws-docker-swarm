@@ -1,5 +1,5 @@
 - name: Leave Swarm if exists.
-  command: "docker swarm leave --force"
+  command: "docker swarm leave"
 - name: 
   debug:
     msg: "[Worker] SWARM_JOIN_COMMAND_HOLDER K8S token is {{ hostvars['SWARM_JOIN_COMMAND_HOLDER']['swarm_join_command'] }}"
