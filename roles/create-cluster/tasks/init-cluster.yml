@@ -1,6 +1,7 @@
+- name: Leave Swarm if exists.
+  command: "docker swarm leave --force"
 - name: Initialize Swarm.
-  command:
-    docker swarm init | grep -i  'docker swarm' | grep -v manager
+  command: "docker swarm init | grep -i  'docker swarm' | grep -v manager"
   register: swarm_join_command
 - name: "Add Swarm worker join command to dummy host"  
   add_host:
