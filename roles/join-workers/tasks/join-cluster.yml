@@ -1,5 +1,5 @@
 - name: Leave Swarm if exists.
-  command: "docker swarm leave"
+  command: "docker swarm leave --force"
   ignore_errors: yes
 - name: 
   debug:
