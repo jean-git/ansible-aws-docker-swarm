@@ -1,6 +1,3 @@
 [swarm_master]
 
 [swarm_workers]
-
-[swarm_workers:vars]
-SWARM_MASTER_NODE_IP=
