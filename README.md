@@ -1,11 +1,11 @@
 # Install Docker Swarm cluster with Ansible
 
-# Introduction
+## Introduction
 This is a ansible project to deploy and configure a Docker Swarm Cluster. This will install and configure the following resources:
 - 1 docker swarm master
 - 2 docker swarm workers
 
-# What we need
+## What we need
 - 3 servers with communitication each other
 - The network ports required for a Docker Swarm to function correctly are:
     - TCP port 2376 for secure Docker client communication. This port is required for Docker Machine to work. Docker Machine is used to orchestrate Docker hosts.
@@ -15,7 +15,7 @@ This is a ansible project to deploy and configure a Docker Swarm Cluster. This w
 
 - Your ansible configured and have communication with 3 servers
 
-# How To Run
+## How To Run
 - Clone this repository
 - Make sure you have terraform installed
 - Make sure, AWS credentials are set in ~/.aws/credentials or exported variables in your enviremont:
@@ -45,5 +45,12 @@ This is a ansible project to deploy and configure a Docker Swarm Cluster. This w
     ```
     ansible-playbook -i hosts main.yml
     ```
+## Check cluster
+
+## Run first service with nginx
+
+## Access nginx web page
+
+## Scalling service
     
 
